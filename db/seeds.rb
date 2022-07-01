@@ -22,7 +22,7 @@ class Seed
         statecode: Faker::Address.state_abbr,
         animal: Faker::Games::Pokemon.name,
         kind: type_of.sample,
-        description: Faker::Lorem.paragraph(sentence_count: 2, supplemental: false, random_sentences_to_add: 4),
+        description: Faker::Lorem.paragraph(sentence_count: 2, supplemental: false, random_sentences_to_add: 4)
       )
       puts " Park #{i}: Name is #{park.name}, Longitude is #{park.longitude}, Latitude is #{park.latitude}, State is #{park.statecode}, Animal is #{park.animal}, and Type is #{park.kind}, Description is #{park.description}"
     end
