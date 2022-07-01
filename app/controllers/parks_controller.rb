@@ -35,6 +35,6 @@ class ParksController < ApplicationController
   private
 
   def park_params
-    params.permit(:name, :location, :state, :animal, :national)
+    params.permit(:name, :longitude, :latitude, :statecode, :animal, :kind, :description)
   end
 end
