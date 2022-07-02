@@ -1,6 +1,6 @@
 require "swagger_helper"
 
-# Patch / Put is not working for Kind. I have tried adding lines 40-43 below to get it to work. I have also added park.id in the paths. I believe since it's an arrary i'm having issues getting it to be able to work.
+# Patch / Put is not working for Kind. I have tried adding lines 40-43 below to get it to work. I have also added park.id in the paths. I believe since it's an arrary i'm having issues getting it to work.
 
 RSpec.describe "api/v2/parks", type: :request do
   path "/api/v2/parks" do
