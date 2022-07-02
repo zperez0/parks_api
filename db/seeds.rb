@@ -14,9 +14,8 @@ class Seed
 
   def generate_parks
     20.times do |i|
-      
+      park_type = ["national", "state"]
       park = Park.create!(
-        park_type = ["national", "state"]
         name: Faker::Games::Pokemon.move,
         longitude: Faker::Address.longitude,
         latitude: Faker::Address.latitude,
