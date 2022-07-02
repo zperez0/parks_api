@@ -28,6 +28,9 @@ gem 'will_paginate', '~> 3.1.1'
 # serializer
 gem 'active_model_serializers'
 
+#search
+gem 'pg_search'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
@@ -42,6 +45,7 @@ group :development, :test do
   gem 'pry'
   gem 'factory_bot_rails'
   gem 'shoulda-matchers'
+  gem 'simplecov', require: false
 end
 
 group :development do
