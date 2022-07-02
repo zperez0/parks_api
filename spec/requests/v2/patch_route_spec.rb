@@ -2,13 +2,13 @@ require "rails_helper"
 
 describe "edit a park route", type: :request do
   before do
-    @park = Park.create!(name: "test_name", longitude: 123, latitude: 456, statecode: "FL", animal: "test_animal", kind: "state", description: "test_description")
-    patch "/api/v2/parks/#{@park.id}", params: { name: "new_name", longitude: 567, latitude: 612, statecode: "WA", animal: "new_animal", kind: "national", description: "new_description" }
+    @park = Park.create!(name: "test name", longitude: 123, latitude: 456, statecode: "FL", animal: "test_animal", kind: "state", description: "test_description")
+    patch "/api/v2/parks/#{@park.id}", params: { name: "new name", longitude: 567, latitude: 612, statecode: "WA", animal: "new_animal", kind: "national", description: "new_description" }
   end
 
   it "updates the parks name, longitude, latitude, statecode, animal, kind, description" do
     get "/api/v2/parks/#{@park.id}"
-    expect(JSON.parse(response.body)["name"]).to eq("new_name")
+    expect(JSON.parse(response.body)["name"]).to eq("New Name")
     expect(JSON.parse(response.body)["longitude"]).to eq(567)
     expect(JSON.parse(response.body)["latitude"]).to eq(612)
     expect(JSON.parse(response.body)["statecode"]).to eq("WA")

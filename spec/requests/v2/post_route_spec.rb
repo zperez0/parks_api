@@ -2,11 +2,11 @@ require "rails_helper"
 
 describe "post a park route", type: :request do
   before do
-    post "/api/v2/parks", params: { name: "test_name", longitude: 123, latitude: 456, statecode: "FL", animal: "test_animal", kind: "state", description: "test_description" }
+    post "/api/v2/parks", params: { name: "test name", longitude: 123, latitude: 456, statecode: "FL", animal: "test_animal", kind: "state", description: "test_description" }
   end
 
   it "returns the park name" do
-    expect(JSON.parse(response.body)["name"]).to eq("test_name")
+    expect(JSON.parse(response.body)["name"]).to eq("Test Name")
   end
 
   it "returns the longitude" do
