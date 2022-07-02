@@ -1,0 +1,114 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/api/v2/parks":
+    get:
+      summary: list parks
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create park
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                longitude:
+                  type: integer
+                latitude:
+                  type: integer
+                statecode:
+                  type: string
+                animal:
+                  type: string
+                description:
+                  type: string
+                kind:
+                  type: array
+  "/api/v2/parks/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show park
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update park
+      parameters:
+      - name: params
+        in: id
+        schema:
+          type: object
+          properties:
+            name:
+              type: string
+            longitude:
+              type: integer
+            latitude:
+              type: integer
+            statecode:
+              type: string
+            animal:
+              type: string
+            description:
+              type: string
+            kind:
+              type: array
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update park
+      parameters:
+      - name: params
+        in: id
+        schema:
+          type: object
+          properties:
+            park:
+              type: object
+              properties:
+                name:
+                  type: string
+                longitude:
+                  type: integer
+                latitude:
+                  type: integer
+                statecode:
+                  type: string
+                animal:
+                  type: string
+                description:
+                  type: string
+                kind:
+                  type: string
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete park
+      responses:
+        '200':
+          description: successful
+servers:
+- url: http://{defaultHost}
+  variables:
+    defaultHost:
+      default: localhost:3000/
