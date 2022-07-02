@@ -23,9 +23,13 @@ gem 'puma', '~> 3.11'
 # gem 'capistrano-rails', group: :development
 
 gem 'faker'
+gem 'will_paginate', '~> 3.1.1'
 
 # serializer
 gem 'active_model_serializers'
+
+# swagger
+gem 'rswag'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
@@ -40,6 +44,7 @@ group :development, :test do
   gem 'launchy'
   gem 'pry'
   gem 'factory_bot_rails'
+  gem 'shoulda-matchers'
 end
 
 group :development do
