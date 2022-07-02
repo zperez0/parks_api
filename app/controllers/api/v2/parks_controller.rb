@@ -2,7 +2,7 @@ module Api
   module V2
     class ParksController < ApplicationController
       def index
-        @parks = Park.all
+        @parks = Park.all.paginate(page: params[:page], per_page: 10)
         json_response(@parks)
       end
 
