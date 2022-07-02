@@ -24,6 +24,9 @@ gem 'puma', '~> 3.11'
 
 gem 'faker'
 
+# serializer
+gem 'active_model_serializers'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
