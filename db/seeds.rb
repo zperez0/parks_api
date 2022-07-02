@@ -13,7 +13,7 @@ class Seed
   end
 
   def generate_parks
-    20.times do |i|
+    10.times do |i|
       park_type = ["national", "state"]
       park = Park.create!(
         name: Faker::Games::Pokemon.move,
