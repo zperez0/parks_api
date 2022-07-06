@@ -9,6 +9,7 @@ A simple Pokemon themed park finder API.
 * _rspec_
 * _PostgreSQL_
 * _faker_
+* _Postman_
 
 ## Description
 This application was created to demonstrate my understanding of building out an API using Rails. It contains data for national and state parks. It features serialization, pagination, and versioning. A user can get, post, put, or delete a park.
@@ -18,21 +19,22 @@ This application was created to demonstrate my understanding of building out an 
 | :---: | :---: | :---: |
 | GET| `localhost:3000/api/v1/parks`  | Returns a list of all of the parks in the database |
 | GET| `localhost:3000/api/v2/parks`  | Returns a list of all of the parks in the database |
-| GET| `localhost:3000/api/v2/parks?=page1` | Returns 5 parks (V2 only)|
+| GET| `localhost:3000/api/v2/parks?=page1` | Returns 10 parks (V2 only)|
 | GET | `localhost:3000/api/v1/parks/:id` | Returns a park with a specific id |
 | GET | `localhost:3000/api/v2/parks/21` | Returns a park with a specific id |
 | POST | `localhost:3000/api/v1/parks` | Create a park |
 | POST | `localhost:3000/api/v2/parks` | Create a park |
-| PUT/PATCH | `localhost:3000/api/v1/park/:id` | Update a parks info |
+| PUT/PATCH | `localhost:3000/api/v1/park/:id` | Update a parks info: name, longitude, latitude, statecode, animal, description |
 | PUT/PATCH | `localhost:3000/api/v2/park/21` | Update a parks info |
 | DELETE | `localhost:3000/api/v1/park/:id` | Delete a park |
 | DELETE | `localhost:3000/api/v2/parks/21` | Delete a park |
 
 
 ## Setup/Installation Requirements
-* _You will need to install the following before proceeding (click on the link to follow the installation process):_
-_[Ruby](https://www.ruby-lang.org/en/documentation/installation/),_
-_[PostgreSQL](https://www.postgresql.org/docs/current/tutorial-install.html)_
+###### _You will need to install the following before proceeding (click on the link to follow the installation process):_
+* _[Ruby](https://www.ruby-lang.org/en/documentation/installation/)_
+* _[PostgreSQL](https://www.postgresql.org/docs/current/tutorial-install.html)_
+* _[Postman](https://www.postman.com/downloads/) (needed in order to create, update, or destroy items.)_
 
 
 * _Go to [GitHub](https://github.com/zperez0/parks_api)_
